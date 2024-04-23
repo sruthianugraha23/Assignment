@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #factorialInput {
+      width: 200px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    #calculateBtn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Factorial Calculator</h1>
+  <input type="number" id="factorialInput" placeholder="Enter a number">
+  <button id="calculateBtn">Calculate Factorial</button>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('calculateBtn').addEventListener('click', function() {
+      var input = document.getElementById('factorialInput').value;
+      var resultElement = document.getElementById('result');
+      
+      if (input === "") {
+        resultElement.textContent = "Please enter a number.";
+      } else {
+        var num = parseInt(input);
+        if (isNaN(num) || num < 0) {
+          resultElement.textContent = "Please enter a valid non-negative integer.";
+        } else {
+          var factorial = 1;
+          for (var i = 2; i <= num; i++) {
+            factorial *= i;
+          }
+          resultElement.textContent = "Factorial of " + num + " is: " + factorial;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
