@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.options {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for radio buttons and labels */
+.options label {
+  display: inline-block; /* Display labels inline-block */
+  margin-bottom: 10px; /* Add space between each option */
+}
+
+.options input[type="radio"] {
+  display: inline-block; /* Display radio buttons inline-block */
+  vertical-align: middle; /* Align radio buttons vertically center with label text */
+  margin-right: 5px; /* Add space between radio buttons */
+}
+
